@@ -7,7 +7,8 @@
 
 
 .toggle-bg{
-    background: #2BED9F; /* Вам понадобится видеть область с тумблером, но не стесняйтесь изменить цвет */
+    background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Вам понадобится видеть область с тумблером, но не стесняйтесь изменить цвет */
+    box-shadow: 0 1px 0 #fff, inset 0 0 2px #d7dee3, inset 0 1px 0 #d7dee3, inset 0 1px 5px #d7dee3;
     display: block; /* ...Чтобы можно было установить высоту и ширину */
     float: left; /* ...Чтобы он не занимал всю ширину страницы */
     height: 30px; /* Если хотите, можно это попозже изменить */
@@ -38,6 +39,7 @@
     top: 0px; /* ...Чтобы отцентрировать его по вертикали */
     width: 28px;
     z-index: 1; /* Помните, он должен быть под невидимыми входами inputs */
+    border: 1px solid lightgrey;
     border-radius: 28px;
     transition: left .2s ease;
    }
