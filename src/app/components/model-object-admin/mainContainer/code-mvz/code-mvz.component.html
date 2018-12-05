@@ -1,0 +1,24 @@
+<!-- <div class="container">
+    <button (click)="getModelsObjects()">Button</button>
+    <pre>{{products | json}}</pre>
+</div> -->
+
+<div>
+  <ul class="tree">
+    <li class="firstlevel">
+      <input type="checkbox" id="nodemodel">
+      <label for="nodemodel">Орг. Структура</label>
+      <ul *ngFor="let pp of productsOfproducts">
+        <li class="secondlevel">
+          <input type="checkbox" id="node + {{pp.name}}">
+          <label for="node + {{pp.name}}">{{pp.name}}</label>
+          <!--  <label for="node + {{p.id}}">{{p.name}}</label> -->
+          <ul *ngFor="let pp1 of pp.data">
+            <li class="thirdlevel"><a href="#">{{pp1.name}}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</div>

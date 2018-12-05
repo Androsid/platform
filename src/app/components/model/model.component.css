@@ -1,0 +1,70 @@
+.wrapper{
+  width: 300px;
+}
+body, a{
+  color:black
+}
+input[type="checkbox"]{
+  display:none;
+}
+ul{
+  list-style: none;
+  padding: 0px;
+  margin: auto;
+}
+li a, ul label{
+  display: block;
+  width: 300px;
+  height: 55px;
+  line-height: 55px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+ul label{
+	padding-left: 20px;
+}
+li a{
+	padding-left: 50px;
+}
+input~ul{
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out; 
+}
+.arrow{
+  width: 20px;height: 10px;
+}
+.settings-ico{
+  float: right;
+  margin: 20px;
+  width: 15px;
+}
+.settings-ico:hover{
+  cursor: pointer;
+}
+input[type="checkbox"]:checked~ul{
+  opacity:1;
+  height: auto;
+}
+input[type="checkbox"]:checked~label .arrow{
+  transform: rotate(90deg);
+}
+.tree label{
+  background: #f1f1f1;
+  border-bottom: 1px solid lightgray;
+}
+.firstlevel label{
+  border: 1px solid lightgray;
+  padding-left: 25px;
+  background-color: #f1f1f1;
+}  
+.secondlevel label{
+  background: white;
+}
+.thirdlevel:nth-child(even){
+  background: #f1f1f1;
+}
+.thirdlevel:nth-child(odd){
+  background: #a09f9f38;
+}

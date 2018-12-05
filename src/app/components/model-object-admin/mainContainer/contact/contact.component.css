@@ -1,0 +1,28 @@
+.form{
+    width: 500px;
+    text-align: center;
+}
+.form_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-controls{
+    padding: 10px;
+}
+.form_controls-btns{
+    display: flex;
+    padding: 10px;
+}
+.form_row-text{
+    display: flex;
+    flex-direction: column;
+}
+.form_controls-trigger{
+    padding: 10px;
+}
+
+.form_btn{
+    margin: 20px;
+    padding: 10px;
+}

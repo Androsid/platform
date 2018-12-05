@@ -1,0 +1,5 @@
+.form_row{
+    padding: 18px 30px;;
+    display: flex;
+    flex-direction: column;
+}

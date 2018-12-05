@@ -1,0 +1,50 @@
+.form_column{
+    padding: 18px 30px;;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.toggle-bg{
+    background: #2BED9F; /* Вам понадобится видеть область с тумблером, но не стесняйтесь изменить цвет */
+    display: block; /* ...Чтобы можно было установить высоту и ширину */
+    float: left; /* ...Чтобы он не занимал всю ширину страницы */
+    height: 30px; /* Если хотите, можно это попозже изменить */
+    position: relative; /* Требуется, чтобы тумблер мог передвигаться */
+    width: 70px; /* Это тоже можно позже изменить */
+    border-radius: 30px;
+   }
+    
+   .toggle-bg input{
+    height: 30px;
+    left: 0;
+    margin: 0; /* Сбросьте поля и отступ */
+    opacity: 0; /* Невидим! */
+    padding: 0;
+    position: absolute;
+    top: 0px; /* Сдвиньте по вертикали */
+    width: 70px;
+    z-index: 2; /* Нам нужно, чтобы вход input находился сверху span.switch, которому мы назначим z-index в 1 */
+   }
+    
+   .switch{
+    background: #ffffff;
+    display: block;
+    float: left;
+    height: 29px;
+    left: 0px; /* Это – начальная точка. При добавлении border radius показывается немного фона, если использовать left: 0;, поэтому лучше всего применить -1px.*/
+    position: relative;
+    top: 0px; /* ...Чтобы отцентрировать его по вертикали */
+    width: 28px;
+    z-index: 1; /* Помните, он должен быть под невидимыми входами inputs */
+    border-radius: 28px;
+    transition: left .2s ease;
+   }
+    
+   .toggle-bg input:checked~.switch{ left: -1px; } /* Исходная позиция тумблера */
+    
+   .toggle-bg input~:checked~.switch{ left: 41px; } /* окончательная относительная позиция переключателя */
+    
+   .toggle-bg input:checked{ z-index: 0; }
+  

@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="container">
+      <form #form="ngForm" (ngSubmit)="this.submitForm(form)">
+        <div class="form">
+          <div class="form_inner">
+            <h3 class="form_title">Появились вопросы?</h3>
+            <div class="form_content">
+              <div class="form_row">
+                <div class="form_input-elem">
+                  <label class="form_field-title">Ваше имя</label>
+                  <input type="text" class="form_input" ngModel name="name" required #inputName="ngModel"/>
+                  <div *ngIf="inputName.touched && inputName.invalid" style="color: red;">Name invalid</div>
+                </div>
+                <div class="form_input-elem">
+                    <label class="form_field-title">Адрес почты</label>
+                    <input type="text" ngModel name="email" class="form_input" required #inputEmail="ngModel"/>
+                    <div *ngIf="inputEmail.touched && inputEmail.invalid" style="color: red;">Email invalid</div>
+                  </div>
+              </div>
+              <div class="form_row-text">
+                  <label class="form_field-title">Введите текст </label>
+                  <textarea ngModel name="textarea" class="form_big-text"></textarea>
+              </div>
+                <div class="form_send-btns">
+                  <button class="form_btn form_btn-reset" type="reset">Очистить</button>
+                  <button class="form_btn form_btn-send" type="submit" [disabled]="inputName.invalid || inputEmail.invalid">Отправить</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </div>

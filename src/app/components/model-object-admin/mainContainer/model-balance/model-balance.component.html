@@ -1,0 +1,32 @@
+<section class="content-right-top">
+    <table style="margin-top: 50px; margin-left: 25px;">
+        <tr class="header">
+            <th>Название</th>
+            <th>Значение</th>
+            <th>Продукт</th>
+            <th>Погрешность</th>
+            <th>Узел комм учета</th>
+            <th>Действия</th>
+        </tr>
+        <tr class="left">
+            <td colspan="6" style="font-weight: bold;">Вход</td>
+        </tr>
+        <tr *ngFor="let props of tags" class="left">
+            <td>{{props.name}}</td>
+            <td>{{props.value}}</td>
+            <td>{{props.product}}</td>
+            <td>{{props.error}}</td>
+            <td>{{props.node}}</td>
+            <td>{{props.actions}}</td>
+        </tr>
+        <tr class="left">
+            <td colspan="6" style="color:deepskyblue;">Добавить строку</td>
+        </tr>
+        <tr class="left">
+            <td colspan="6" style="font-weight: bold;">Выход</td>
+        </tr>
+        <tr class="left">
+            <td colspan="6" style="font-weight: bold;">Остаток на начало</td>
+        </tr>
+    </table>
+</section>

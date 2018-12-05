@@ -1,0 +1,33 @@
+<!-- <div class="container">
+    <button (click)="getModelsObjects()">Button</button>
+    <pre>{{products | json}}</pre>
+</div> -->
+
+<div *ngFor="let m of models">
+    <ul class="tree">
+        <li class="firstlevel">
+            <input type="checkbox" id="node + {{m.id}}">
+            <label for="node + {{m.id}}" (click)="fillMassiveOfModelsObjects()"><img src="./assets/arrow-right.svg" class="arrow">{{m.name}}</label>
+            <!--             <ul *ngFor="let p of products">
+                <li class="secondlevel">
+                    <input type="checkbox" id="node + {{p.id}}">
+                    <label for="node + {{p.id}}" (click)="getObjectsOfModelsObjects(p.id, p.name)">{{p.name}}</label>
+                   
+                    <ul *ngFor="let pp of productsOfproducts">
+                        <li  class="thirdlevel"><a href="#">{{pp.parentName}}</a></li>
+                    </ul>
+                </li>
+            </ul> -->
+            <ul *ngFor="let pp of productsOfproducts; trackBy:identify">
+                <li class="secondlevel">
+                    <input type="checkbox" id="node + {{pp.parentName}}">
+                    <label for="node + {{pp.parentName}}"><img src="./assets/arrow-right.svg" class="arrow">{{pp.parentName}}</label>
+                    <!--  <label for="node + {{p.id}}">{{p.name}}</label> -->
+                    <ul>
+                        <li *ngFor="let pp1 of pp.data" class="thirdlevel"><a href="#">{{pp1.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

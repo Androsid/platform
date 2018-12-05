@@ -1,0 +1,73 @@
+.header {
+    overflow: hidden;
+    border: 1px solid lightgrey;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    position: relative;
+  }
+  
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  .header-right {
+    float: right;
+  }
+
+.header span {
+   position: absolute;
+   bottom: 0;
+   left: 40px;
+}
+.header .spanlogo{
+  position: absolute;
+  bottom: 0;
+  left: 160px;
+}
+.left-sidebar-content-toggler-item {
+  margin-right: 3px;
+  width: 45px;
+  background-color: transparent;
+  padding: 1px;
+}
+button {
+  /* -webkit-border-radius: 0; */
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-width: 0;
+}
+
+.left-sidebar-content-toggler-item::after{
+  float: left;
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 2px;
+    top: 11px;
+    left: 9px;
+    background: dodgerblue;
+    box-shadow: 0 10px 0 dodgerblue, 0 20px 0 dodgerblue;
+}
